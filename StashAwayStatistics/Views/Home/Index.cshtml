@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    StashAway vs
+    <select name="dropdown" id="type" onchange="redrawGraph()">
+        <option value="none">None</option>
+        <option value="60_40">60/40</option>
+        <option value="20_80">20/80</option>
+    </select>
+    <br />
+    Time period:
+    <select name="dropdown" id="timePeriod" onchange="redrawGraph()">
+        <option value="none">Max</option>
+        <option value="60">5 years</option>
+        <option value="12">1 year</option>
+        <option value="6">6 months</option>
+        <option value="1">1 month</option>
+    </select>
+    Currency:
+    <select name="dropdown" id="currency" onchange="updateDataSets()">
+        <option value="rm">RM</option>
+        <option value="sgd">SGD</option>
+    </select>
+    <canvas id="chart"></canvas>
+</div>
+
